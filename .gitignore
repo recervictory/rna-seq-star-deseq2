@@ -1,4 +1,4 @@
-*
+
 !scripts
 !scripts/*
 !scripts/common
@@ -21,3 +21,10 @@ scripts/.snakemake*
 !.gitattributes
 !.test
 !.test/data
+!.devcontainer/devcontainer.json
+.snakemake/
+logs/
+results/
+ngs-test-data/
+resources/
+report.zip
