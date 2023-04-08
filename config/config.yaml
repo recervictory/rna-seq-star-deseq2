@@ -8,13 +8,17 @@ units: config/units.tsv
 
 ref:
   # Ensembl species name
-  species: homo_sapiens
-  # Ensembl release (make sure to take one where snpeff data is available, check 'snpEff databases' output)
+  species: saccharomyces_cerevisiae
+  # Ensembl release
   release: 100
   # Genome build
-  build: GRCh38
+  build: R64-1-1
+
 
 trimming:
+  activate: False
+
+mergeReads:
   activate: False
 
 pca:
@@ -26,12 +30,12 @@ pca:
 diffexp:
   # contrasts for the deseq2 results method
   contrasts:
-    A-vs-B:
-      - A
-      - B
+    treated-vs-untreated:
+      - treated
+      - untreated
   model: ~condition
 
 params:
   cutadapt-pe: ""
   cutadapt-se: ""
-  star: "--outSAMtype BAM Unsorted"
+  star: ""
